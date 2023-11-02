@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body
+            {
+                background-color: skyblue;
+                color: black;
+            }
+        </style>
+        <script>
+            function fun()
+            {
+                let x;
+                x=document.getElementById("char").value;
+                document.getElementById("sample").innerHTML=x;
+            }
+        </script>
+    </head>
+    <body>
+        <p id="sample">This is a sample text for representation purpose</p>
+        <input type="text" placeholder="Enter the string" id="char">
+        <button onclick="fun()">Change text</button>
+    </body>
+</html>
