@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body
+            {
+                background-color: skyblue;
+                color: black;
+                text-align: center;
+                margin-top: 10%;
+            }
+        </style>
+        <script>
+            function fun()
+            {
+                let x,y,z;
+                x=parseInt(document.getElementById("num1").value);
+                y=parseInt(document.getElementById("num2").value);
+                z=x+y;
+                document.getElementById("sum").innerHTML = z;
+            }
+        </script>
+    </head>
+    <body>
+        <input type="number" placeholder="Enter 1st number" id="num1"><br><br>
+        <input type="number" placeholder="Enter 2nd number" id="num2"><br><br>
+        <button onclick="fun()">Add</button><br><br>
+        <p><input id="summ"></p><br>
+    </body>
+</html>
