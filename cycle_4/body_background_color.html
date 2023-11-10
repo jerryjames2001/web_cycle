@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{text-align: center;}
+        </style>
+    </head>
+    <body id="bg">
+        Select color<input type="color" id="col">
+        <script>
+            document.getElementById("col").addEventListener("input",function(){
+            let x;
+            x=document.getElementById("col").value;
+            document.getElementById("bg").style.backgroundColor=x;
+            });
+        </script>
+    </body>
+</html>
