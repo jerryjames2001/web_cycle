@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{text-align:center;}
+        </style>
+    </head>
+    <body>
+        <p id="bg">Our forests, rivers, oceans and soils provide us with the food we eat, the air we breathe,
+            <br> water we irrigate our crops with. We also rely on them for numerous other goods and services we depend on for our health, happiness and prosperity.<br>
+             natural assets are often called the world's 'natural capital'.</p>
+        <button id="change" onclick="calling()">Change color</button>
+        <script>
+            function calling()
+            {
+            let x=prompt("Enter the color you want to change");
+            document.getElementById("bg").style.backgroundColor=x;
+            }
+        </script>
+    </body>
+</html>
