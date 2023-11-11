@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            let name,birth,age,curdate;
+            name=prompt("Enter your name");
+            birth=parseInt(prompt("Hi "+ name +" Which year was you born"));
+            curdate=new Date().getFullYear();
+            age=curdate-birth;
+            document.write(name," you are "+ age +" years old.");
+            alert(name+" you are "+ age +" years old.")
+        </script>
+    </body>
+</html>
