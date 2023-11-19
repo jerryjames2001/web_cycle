@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                color: white;
+                align-items: center;
+                display: flex;
+                height: 100vh;
+                margin: 0;
+                justify-content: center;
+            }
+            #container{
+                background-color: rebeccapurple;
+                text-align: center;
+                height:40vh;
+                width: 50vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            #container img{
+                display: none;
+                max-width: 100%;
+                max-height: 100%;
+                position:relative;
+                margin: 0 0 0 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <h2>Hover here</h2>
+        </div>
+
+        <script>
+            let container=document.getElementById('container');
+            var image=document.createElement('img');
+            image.src='butterfly.jpg';
+
+            container.addEventListener('mouseover',function()
+            {  container.appendChild(image);
+               image.style.display='block';
+               document.getElementById('container').querySelector('h2').innerHTML="Nature";
+            });
+
+            container.addEventListener('mouseout',function()
+            {
+                container.removeChild(image);
+                image.style.display='none';
+            });
+        </script>
+    </body>
+</html>
