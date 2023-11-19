@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{background-color: skyblue;
+            text-align: center;}
+            form
+            {   background-color: pink;
+                margin: 5% 35%;
+            }
+            input
+            {   border: 0;
+                margin-top: 1.5%;
+                margin-bottom: 1.5%;
+            }
+            button{
+                background-image: url('eye_icon.png');
+                height: 3vh;
+                border: 0;;
+                width:auto;
+                background-size:contain;
+                background-repeat: no-repeat;
+            }
+            button:hover{background-color: black;}
+        </style>
+    </head>
+    <body>
+        <form action="12_complete.html" method=""" id="formssubmit">
+            <input type="text" placeholder="First name" id="fname" required><br>
+            <input type="text" placeholder="Last name" id="lname"><br>
+            <input type="number" placeholder="Mobile no" id="number"><br>
+            Sex: &nbsp;
+            <input type="radio" name="sex">Male
+            <input type="radio" name="sex">Female<br>
+            <input type="email" placeholder="Email Address" required><br><br>
+            <input type="password" id="pass" placeholder="Password" required>
+            <button onclick="show('pass')"></button>
+            <br>
+            <input type="password" id="repass" placeholder="Re type password" required>
+            <button onclick="show('repass')"></button>
+            <br>
+            <h3 id="error"></h3>
+            <input type="submit" value="Register" id="register">
+        </form>
+        <script>
+            document.getElementById('formssubmit').addEventListener('submit',function(event) {
+                if(!validation())
+                {
+                    event.preventDefault();
+                }
+            });
+            function show(pass)
+            {
+                let x=document.getElementById(pass);
+                if (x.type === "password")
+                x.type="text";
+                else
+                x.type="password";
+            }
+            function validation()
+            {
+                let pass,repass,error;
+                pass=document.getElementById('pass').value;
+                repass=document.getElementById('repass').value;
+                error=document.getElementById('error');
+                if(pass != repass)
+                {
+                error.innerHTML="Password not matching"
+                return false;
+                }
+                else
+                {
+                return true;
+                
+                }
+            }
+        </script>
+    </body>
+</html>
