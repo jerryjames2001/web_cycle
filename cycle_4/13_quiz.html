@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{text-align: center;
+            background-color: skyblue;}
+            .inside{background-color: blueviolet;}
+        </style>
+    </head>
+    <body>
+        <form id="quizform">
+            <div class="inside">1. What is the capital of France?<br>
+                <input type="radio" name="q11" id="q1" value="1">Paris
+                <input type="radio" name="q11" id="q1">London
+                <input type="radio" name="q11" id="q1">Rome
+                <input type="radio" name="q11" id="q1">Madrid
+            </div><br>
+            <div class="inside">2. Which planet is known as the "Red Planet"?<br>
+                <input type="radio" name="q22" id="q2">Venus
+                <input type="radio" name="q22" id="q2" value="1">Mars
+                <input type="radio" name="q22" id="q2">Jupiter
+                <input type="radio" name="q22" id="q2">Saturn
+            </div><br>
+            <div class="inside">3. What is the largest mammal in the world?<br>
+                <input type="radio" name="q33" id="q3">Elephant
+                <input type="radio" name="q33" id="q3">Giraffe
+                <input type="radio" name="q33" id="q3" value="1">Blue Whale
+                <input type="radio" name="q33" id="q3">Dolphin
+            </div><br>
+            <div class="inside">4. Who wrote "Romeo and Juliet"?<br>
+                <input type="radio" name="q44" id="q4">Charles Dickens
+                <input type="radio" name="q44" id="q4" value="1">William Shakespeare
+                <input type="radio" name="q44" id="q4">Jane Austen
+                <input type="radio" name="q44" id="q4">Mark Twain
+            </div><br>
+            <div class="inside">5. What is the main ingredient in guacamole?<br>
+                <input type="radio" name="q55" id="q5">Tomatoes
+                <input type="radio" name="q55" id="q5" value="1">Avocado
+                <input type="radio" name="q55" id="q5">Onions
+                <input type="radio" name="q55" id="q5">Peppers
+            </div><br>
+            <input type="submit" onclick="submitt()">
+        </form>
+        <script>
+            function submitt()
+            {
+                const correctans=["1","1","1","1","1"];
+                const userans=[];
+                const inputs=form.elements;
+                console.log("no:of inputs",+inputs);
+                let i,score=0;
+                for(i=0;i<inputs.length;i++)
+                {
+                    if(inputs[i].checked)
+                    userans.push(inputs[i].value);
+                }
+                for(i=0;i<userans.length;i++)
+                if(userans[i]==correctans[i])
+                score++;
+                alert("You scored",+score);
+            }
+        </script>
+    </body>
+</html>
