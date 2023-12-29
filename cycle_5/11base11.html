@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{text-align: center;
+        background-color: skyblue;
+    color: white;}
+    form{border: 1px solid black;
+    text-align: center;
+    margin: auto 20%;
+}
+form > input{
+    background-color: lightblue;
+}
+    </style>
+</head>
+
+<body>
+     <!-- The code you provided is an HTML form. It allows users to input their contact information and
+    select a department.  -->
+    <form action="send.php" method="post">
+        <h1>Contact us</h1>
+        <input type="text" name="fname" id="" placeholder="First name" required>
+        <input type="text" name="lname" id="" placeholder="last name" required><br>
+        <input type="radio" name="gender" value="men">Male
+        <input type="radio" name="gender" value="women">Female<br>
+        <input type="email" name="email" placeholder="Email" required><br>
+        <select name="department">
+            <option value="mca">MCA</option>
+            <option value="cs enginnering">CS Enginnering</option>
+            <option value="Mech enginnering">Mech Enginnering</option>
+            <option value="Ai engineering">Ai Enginnering</option>
+        </select><br>
+        <input type="submit">
+</form>
+</body>
+</html>
